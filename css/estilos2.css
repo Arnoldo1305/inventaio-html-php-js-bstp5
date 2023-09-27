@@ -1,0 +1,28 @@
+main>.container {
+    padding: 30px 0;
+}
+
+.flex-item {
+    width: 90px;
+}
+
+.text_banner {
+    text-align: left;
+    font-family: impact, sans-serif;
+    font-size: 50px;
+    -webkit-text-stroke: 1px cadetblue;
+    color: aliceblue;
+}
+
+.text_banner2 {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 25px;
+    -webkit-text-stroke: 0.5px cadetblue;
+    color: aliceblue;
+}
+
+#ultimo+div {
+    visibility: hidden;
+}
+
