@@ -15,9 +15,8 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulce Vita</title>
-    <link rel="shortcut icon"
-        href="https://firebasestorage.googleapis.com/v0/b/base-menu-869e3.appspot.com/o/dulcevita%2Flogo.png?alt=media&token=0e6746e2-aef2-4752-8090-e63ca5bcd4b3">
+    <title>Env Inventario</title>
+    <link rel="shortcut icon" href="">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,11 +34,7 @@ session_start();
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/base-menu-869e3.appspot.com/o/dulcevita%2Flogo.png?alt=media&token=0e6746e2-aef2-4752-8090-e63ca5bcd4b3"
-                        alt="" width="30" height="30" class="d-inline-block align-text-top">
-
-                    Dulce Vita</a>
+                <a class="navbar-brand" href="#">Env Inventario</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -60,33 +55,32 @@ session_start();
     <!--Contenido-->
 
     <div class="container">
-            <div class="p-3">
-                <h1 id="menu">Inventario</h1>
-            </div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <?php foreach ($resultado as $row) {
+        <div class="p-3">
+            <h1 id="menu">Inventario</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <?php foreach ($resultado as $row) {
                 ?>
-                <div class="col mb-3">
-                    <div class="card shadow-sm h-100 ">
-                        <img class="img-fluid rounded mx-auto d-block " width="200px"
-                            src="<?php echo $row['imagen']; ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo (string)$row['nombre_producto']; ?></h5>
-                            <p class="card-text mb-1">$ <?php echo $row['precio_producto']; ?> /
-                                <?php echo $row['piezas']; ?> piezas</p>
-                            <p class="card-text mb-1">D: <?php echo $row['descripcion_producto']; ?></p>    
-                            <p class="card-text">Stock: <?php echo $row['stock']; ?> /Unidades</p>
-                            
-                        </div>
+            <div class="col mb-3">
+                <div class="card shadow-sm h-100 ">
+                    <img class="img-fluid rounded mx-auto d-block " width="200px" src="<?php echo $row['imagen']; ?>">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo (string)$row['nombre_producto']; ?></h5>
+                        <p class="card-text mb-1">$ <?php echo $row['precio_producto']; ?> /
+                            <?php echo $row['piezas']; ?> piezas</p>
+                        <p class="card-text mb-1">D: <?php echo $row['descripcion_producto']; ?></p>
+                        <p class="card-text">Stock: <?php echo $row['stock']; ?> /Unidades</p>
+
                     </div>
                 </div>
-                <?php }
+            </div>
+            <?php }
                 ?>
 
-            </div>
         </div>
+    </div>
     <!-- boton flotante -->
-    
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
