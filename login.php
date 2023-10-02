@@ -32,7 +32,7 @@
 <body>
     <main>
         <div class=" contenedor__login-register">
-            <form action="config/validar.php" class="formulario__login " method="post">
+            <form action="" class="formulario__login " method="post">
                 <h2 class="p-3">Iniciar Sesión</h2>
                 <div class="m-3 ">
                     <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
@@ -47,7 +47,7 @@
                 <button class="d-flex m-3">Entrar</button>
                 <form class="d-flex">
                     <a class="btn btn-danger p-3 m-3" href="index.php" role="button">Regresar</a>
-                    <a class="link" href="registro.php">¿No tienes cuenta? Registrate Aquí.</a>
+                    <a class="link" href="">¿No tienes cuenta? Registrate Aquí.</a>
                 </form>
 
             </form>
