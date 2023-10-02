@@ -190,3 +190,4 @@ $pendiente = $sql->fetchAll(PDO::FETCH_ASSOC);
 <!-- Footer -->
 
 </html>
+<?php
