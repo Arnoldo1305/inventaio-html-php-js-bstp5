@@ -45,7 +45,7 @@ session_start();
 
                     </ul>
                     <form class="d-flex p-2">
-                        <a class="btn btn-success" href="login.php" role="button">Iniciar Sesión</a>
+                        <a class="btn btn-success" href="" role="button">Iniciar Sesión</a>
                     </form>
                 </div>
             </div>
@@ -55,30 +55,32 @@ session_start();
     <!--Contenido-->
 
     <div class="container">
-        <div class="p-3">
-            <h1 id="menu">Inventario</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <?php foreach ($resultado as $row) {
+            <div class="p-3">
+                <h1 id="menu">Inventario</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-3">
+                <?php foreach ($resultado2 as $row) {
                 ?>
-            <div class="col mb-3">
-                <div class="card shadow-sm h-100 ">
-                    <img class="img-fluid rounded mx-auto d-block " width="200px" src="<?php echo $row['imagen']; ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo (string)$row['nombre_producto']; ?></h5>
-                        <p class="card-text mb-1">$ <?php echo $row['precio_producto']; ?> /
-                            <?php echo $row['piezas']; ?> piezas</p>
-                        <p class="card-text mb-1">D: <?php echo $row['descripcion_producto']; ?></p>
-                        <p class="card-text">Stock: <?php echo $row['stock']; ?> /Unidades</p>
-
+                <div class="col mb-3">
+                    <div class="card shadow-sm h-100 ">
+                        <img class="img-fluid rounded mx-auto d-block " width="200px"
+                            src="<?php echo $row['imagen']; ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo (string)$row['nombre_producto']; ?></h5>
+                            <p class="card-text mb-1">$ <?php echo $row['precio_producto']; ?> /
+                                <?php echo $row['piezas']; ?> piezas</p>
+                            <p class="card-text mb-1">D: <?php echo $row['descripcion_producto']; ?></p>    
+                            <p class="card-text">Stock: <?php echo $row['stock']; ?> /Unidades</p>
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php }
+                <?php }
                 ?>
 
+            </div>
         </div>
-    </div>
+    </main>
     <!-- boton flotante -->
 
 
